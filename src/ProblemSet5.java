@@ -44,9 +44,9 @@ public class ProblemSet5 {
         // System.out.println(ps.isCentered("abcdefg", "cd"));
   
     
-        System.out.println(ps.countMe("I am an example sentence", 'e'));
-        System.out.println(ps.countMe(null, 'a'));
-        System.out.println(ps.countMe("abc$ def$", '$'));
+        // System.out.println(ps.countMe("I am an example sentence", 'e'));
+        // System.out.println(ps.countMe(null, 'a'));
+        // System.out.println(ps.countMe("abc$ def$", '$'));
   
         // System.out.println("\nExercise 6");
         // System.out.println(ps.triplets("aaabbbccc"));
@@ -55,9 +55,9 @@ public class ProblemSet5 {
         // System.out.println(ps.triplets(null));
   
         // System.out.println("\nExercise 7");
-        // System.out.println(ps.addMe("123 abc 123"));
-        // System.out.println(ps.addMe("abcdefghijk"));
-        // System.out.println(ps.addMe(null));
+        System.out.println(ps.addMe("123 abc 123"));
+        System.out.println(ps.addMe("abcdefghijk"));
+        System.out.println(ps.addMe(null));
   
         // System.out.println("\nExercise 8");
         // System.out.println(ps.sequence("abbcccdddd"));
@@ -158,10 +158,10 @@ public class ProblemSet5 {
      */
     
     public int countMe(String text, char suffix) {
-        int count = 0;
-        String[] words =  text.split(" ");
-
+        
         if(text != null &&  Character.isAlphabetic(suffix)){
+            int count = 0;
+            String[] words =  text.split(" ");
             for(int i = 0; i < words.length; i++){
                 if(words[i].endsWith(Character.toString(suffix))){
                     count++;
@@ -185,9 +185,23 @@ public class ProblemSet5 {
      * Given a string, compute the number of triplets in text.
      */
     
-    // public int triplets(String text) {
+    public int triplets(String text) {
+        if(text != null){
+            int triplet = 0;
 
-    // }
+            for(int i = 1; i < text.length()-1; i++){
+                char one = text.charAt(i-1);
+                char two = text.charAt(i);
+                char three = text.charAt(i+1);
+                if(one == two && two == three){
+                    triplet +=1;
+                }
+            }
+            return triplet;
+        }else{
+            return -1;
+        }
+    }
     
     /*
      * Exercise 7.
@@ -195,9 +209,21 @@ public class ProblemSet5 {
      * Given a string, compute the sum of the digits in text.
      */
     
-    // public long addMe(String text) {
-
-    // }
+    public long addMe(String text) {
+        if(text != null){
+            char character;
+            int sum = 0;
+            for(int i = 0; i < text.length(); i++){
+                character = text.charAt(i);
+                if(Character.isDigit(character)){
+                    sum += Character.getNumericValue(character);
+                }
+            }
+            return sum;
+        }else{
+            return -1;
+        }
+    }
     
     /*
      * Exercise 8.
@@ -205,9 +231,9 @@ public class ProblemSet5 {
      * Given a string, compute the length of the longest sequence.
      */
     
-    // public long sequence(String text) {
+    public long sequence(String text) {
 
-    // }
+    }
     
     /*
      * Exercise 9.
