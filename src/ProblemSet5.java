@@ -19,7 +19,17 @@
 public class ProblemSet5 {
     
     public static void main(String[] args) {
-        
+        ProblemSet5 ps = new ProblemSet5();
+
+        ps.surroundMe("cde", "abfg");
+        ps.surroundMe(null, "####");
+        ps.surroundMe("abc", null);
+        ps.surroundMe("abc", "123");
+
+        ps.endsMeet("abcdefg", 2);
+        ps.endsMeet(null, 2);
+        ps.endsMeet("", 2);
+        Sysytem.out.println(ps.endsMeet("abc", "123"));
     }
     
     /*
@@ -30,7 +40,16 @@ public class ProblemSet5 {
      */
     
     public String surroundMe(String in, String out) {
-
+        String first;
+        String last;
+        String complete;
+        if(in != null && out != null && out.length() == 4){
+            first = out.substring(0, (out.length()/2));
+            last = out.substring(out.length()/2, out.length());
+            complete = first + in + last;
+        }else{
+            complete = in;
+        }
     }
     
     /*
@@ -41,6 +60,15 @@ public class ProblemSet5 {
      */
     
     public String endsMeet(String text, int n) {
+ 
+        String output = text;
+ 
+        if(text == null || text.length() > 10 || text.length() < 1 || n > text.length() || n < 1){
+            return output;
+        }else{
+            output = text.substring(0, n) + text.substring(text.length() - n, text.length());
+            return output;
+        }
 
     }
     
@@ -50,7 +78,7 @@ public class ProblemSet5 {
      * Given a string, return a new string using the middle three characters of text.
      */
     
-    public String middleMan(String text) {
+    public static String middleMan(String text) {
 
     }
     
