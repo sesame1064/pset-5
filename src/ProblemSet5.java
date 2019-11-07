@@ -59,7 +59,6 @@ public class ProblemSet5 {
         // System.out.println(ps.addMe("abcdefghijk"));
         // System.out.println(ps.addMe(null));
   
-        // System.out.println("\nExercise 8");
         System.out.println(ps.sequence("abbcccdddd"));
         System.out.println(ps.sequence("aAabBbBb"));
         System.out.println(ps.sequence(""));
@@ -232,27 +231,31 @@ public class ProblemSet5 {
      */
     
     public long sequence(String text) {
-        if(text != null){
-            int seq = 1;
-            int mainSeq = 1;
+        if (text != null) {
+            long mainSeq = 1;
+            long seqLen = 1;
             char one = ' ';
             char two = ' ';
-
-            for(int i = 0; i < text.length()-1; i++){
-                one = text.charAt(i);
-                two = text.charAt(i+1);
-                if(one == two){
-                    seq += 1;
-                    if(seq > mainSeq){
-                        mainSeq = seq;
-                    } else{
-                    seq = 1;
+            for (int i = 1; i < text.length(); i++ ) {
+              one = text.charAt(i-1);
+              two = text.charAt(i);
+              if (one == two) {
+                seqLen -= -1;
+                if (seqLen > mainSeq) {
+                    mainSeq = seqLen;
                 }
+               } else {
+                seqLen = 1;
+               }
             }
-            return mainSeq;
-        }else{
+              if (one == ' ') {
+                mainSeq = 0;
+              }
+              return mainSeq;
+          }else {
             return -1;
-        }
+          }
+
     }
     
     /*
