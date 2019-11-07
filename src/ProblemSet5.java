@@ -21,27 +21,27 @@ public class ProblemSet5 {
     public static void main(String[] args) {
         ProblemSet5 ps = new ProblemSet5();
 
-        System.out.println(ps.surroundMe("cde", "abfg"));
-        System.out.println(ps.surroundMe(null, "####"));
-        System.out.println(ps.surroundMe("abc", null));
-        System.out.println(ps.surroundMe("abc", "123"));
+        // System.out.println(ps.surroundMe("cde", "abfg"));
+        // System.out.println(ps.surroundMe(null, "####"));
+        // System.out.println(ps.surroundMe("abc", null));
+        // System.out.println(ps.surroundMe("abc", "123"));
 
-        System.out.println(ps.endsMeet("abcdefg", 2));
-        System.out.println(ps.endsMeet(null, 2));
-        System.out.println(ps.endsMeet("", 2));
-        System.out.println(ps.endsMeet("abc", -1));
+        // System.out.println(ps.endsMeet("abcdefg", 2));
+        // System.out.println(ps.endsMeet(null, 2));
+        // System.out.println(ps.endsMeet("", 2));
+        // System.out.println(ps.endsMeet("abc", -1));
 
-        System.out.println(ps.middleMan("abcdefg"));
-        System.out.println(ps.middleMan(null));
-        System.out.println(ps.middleMan("12"));
-        System.out.println(ps.middleMan("a"));
+        // System.out.println(ps.middleMan("abcdefg"));
+        // System.out.println(ps.middleMan(null));
+        // System.out.println(ps.middleMan("12"));
+        // System.out.println(ps.middleMan("a"));
   
-        System.out.println(ps.isCentered("abcdefg", "cde"));
-        System.out.println(ps.isCentered("abcdefg", "abc"));
-        System.out.println(ps.isCentered(null, "abc"));
-        System.out.println(ps.isCentered("abcd", "abc"));
-        System.out.println(ps.isCentered("abc", null));
-        System.out.println(ps.isCentered("abcdefg", "cd"));
+        // System.out.println(ps.isCentered("abcdefg", "cde"));
+        // System.out.println(ps.isCentered("abcdefg", "abc"));
+        // System.out.println(ps.isCentered(null, "abc"));
+        // System.out.println(ps.isCentered("abcd", "abc"));
+        // System.out.println(ps.isCentered("abc", null));
+        // System.out.println(ps.isCentered("abcdefg", "cd"));
   
     
         // System.out.println(ps.countMe("I am an example sentence", 'e'));
@@ -60,10 +60,10 @@ public class ProblemSet5 {
         // System.out.println(ps.addMe(null));
   
 
-        System.out.println(ps.sequence("abbcccdddd"));
-        System.out.println(ps.sequence("aAabBbBb"));
-        System.out.println(ps.sequence(""));
-        System.out.println(ps.sequence(null));
+        // System.out.println(ps.sequence("abbcccdddd"));
+        // System.out.println(ps.sequence("aAabBbBb"));
+        // System.out.println(ps.sequence(""));
+        // System.out.println(ps.sequence(null));
 
         // System.out.println(ps.intertwine("aceg", "bdfh"));
         // System.out.println(ps.intertwine("abc", "12345"));
