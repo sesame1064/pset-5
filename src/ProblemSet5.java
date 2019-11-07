@@ -21,10 +21,10 @@ public class ProblemSet5 {
     public static void main(String[] args) {
         ProblemSet5 ps = new ProblemSet5();
 
-        // System.out.println(ps.surroundMe("cde", "abfg"));
-        // System.out.println(ps.surroundMe(null, "####"));
-        // System.out.println(ps.surroundMe("abc", null));
-        // System.out.println(ps.surroundMe("abc", "123"));
+        System.out.println(ps.surroundMe("cde", "abfg"));
+        System.out.println(ps.surroundMe(null, "####"));
+        System.out.println(ps.surroundMe("abc", null));
+        System.out.println(ps.surroundMe("abc", "123"));
 
         // System.out.println(ps.endsMeet("abcdefg", 2));
         // System.out.println(ps.endsMeet(null, 2));
@@ -59,6 +59,7 @@ public class ProblemSet5 {
         // System.out.println(ps.addMe("abcdefghijk"));
         // System.out.println(ps.addMe(null));
   
+
         System.out.println(ps.sequence("abbcccdddd"));
         System.out.println(ps.sequence("aAabBbBb"));
         System.out.println(ps.sequence(""));
