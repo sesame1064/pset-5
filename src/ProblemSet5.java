@@ -36,12 +36,12 @@ public class ProblemSet5 {
         System.out.println(ps.middleMan("12"));
         System.out.println(ps.middleMan("a"));
   
-        // System.out.println(ps.isCentered("abcdefg", "cde"));
-        // System.out.println(ps.isCentered("abcdefg", "abc"));
-        // System.out.println(ps.isCentered(null, "abc"));
-        // System.out.println(ps.isCentered("abcd", "abc"));
-        // System.out.println(ps.isCentered("abc", null));
-        // System.out.println(ps.isCentered("abcdefg", "cd"));
+        System.out.println(ps.isCentered("abcdefg", "cde"));
+        System.out.println(ps.isCentered("abcdefg", "abc"));
+        System.out.println(ps.isCentered(null, "abc"));
+        System.out.println(ps.isCentered("abcd", "abc"));
+        System.out.println(ps.isCentered("abc", null));
+        System.out.println(ps.isCentered("abcdefg", "cd"));
   
     
         // System.out.println(ps.countMe("I am an example sentence", 'e'));
