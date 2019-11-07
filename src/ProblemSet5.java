@@ -26,15 +26,15 @@ public class ProblemSet5 {
         System.out.println(ps.surroundMe("abc", null));
         System.out.println(ps.surroundMe("abc", "123"));
 
-        // System.out.println(ps.endsMeet("abcdefg", 2));
-        // System.out.println(ps.endsMeet(null, 2));
-        // System.out.println(ps.endsMeet("", 2));
-        // System.out.println(ps.endsMeet("abc", -1));
+        System.out.println(ps.endsMeet("abcdefg", 2));
+        System.out.println(ps.endsMeet(null, 2));
+        System.out.println(ps.endsMeet("", 2));
+        System.out.println(ps.endsMeet("abc", -1));
 
-        // System.out.println(ps.middleMan("abcdefg"));
-        // System.out.println(ps.middleMan(null));
-        // System.out.println(ps.middleMan("12"));
-        // System.out.println(ps.middleMan("a"));
+        System.out.println(ps.middleMan("abcdefg"));
+        System.out.println(ps.middleMan(null));
+        System.out.println(ps.middleMan("12"));
+        System.out.println(ps.middleMan("a"));
   
         // System.out.println(ps.isCentered("abcdefg", "cde"));
         // System.out.println(ps.isCentered("abcdefg", "abc"));
