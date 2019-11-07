@@ -43,10 +43,10 @@ public class ProblemSet5 {
         // System.out.println(ps.isCentered("abc", null));
         // System.out.println(ps.isCentered("abcdefg", "cd"));
   
-        // System.out.println(ps.countMe("bruh is there big licks", 's'));
-        // System.out.println(ps.countMe("I am an example sentence", 'e'));
-        // System.out.println(ps.countMe(null, 'a'));
-        // System.out.println(ps.countMe("abc$ def$", '$'));
+    
+        System.out.println(ps.countMe("I am an example sentence", 'e'));
+        System.out.println(ps.countMe(null, 'a'));
+        System.out.println(ps.countMe("abc$ def$", '$'));
   
         // System.out.println("\nExercise 6");
         // System.out.println(ps.triplets("aaabbbccc"));
@@ -64,18 +64,17 @@ public class ProblemSet5 {
         // System.out.println(ps.sequence("aAabBbBb"));
         // System.out.println(ps.sequence(""));
         // System.out.println(ps.sequence(null));
-  
-        // System.out.println("\nExercise 9");
+
         // System.out.println(ps.intertwine("aceg", "bdfh"));
         // System.out.println(ps.intertwine("abc", "12345"));
         // System.out.println(ps.intertwine(null, "abcd"));
         // System.out.println(ps.intertwine("abcd", null));
         // System.out.println(ps.intertwine(null, null));
         
-        System.out.println("\nExercise 10");
-        System.out.println(ps.isPalindrome("racecar"));
-        System.out.println(ps.isPalindrome("Madam"));
-        System.out.println(ps.isPalindrome(null));
+        // System.out.println("\nExercise 10");
+        // System.out.println(ps.isPalindrome("racecar"));
+        // System.out.println(ps.isPalindrome("Madam"));
+        // System.out.println(ps.isPalindrome(null));
     }
     
     /*
@@ -158,19 +157,27 @@ public class ProblemSet5 {
      * Given a string and a character, compute the number of words that end in suffix.
      */
     
-    // public int countMe(String text, char suffix) {
-    //     int count = 0;
-    //     String[] words =  text.split(" ");
+    public int countMe(String text, char suffix) {
+        int count = 0;
+        String[] words =  text.split(" ");
 
-    //     if(text != null &&  Character.isAlphabet(suffix)){
-    //         for(int i = 0; i < words.length; i++){
-    //             if(words[i].endsWith(Character.toString(suffix))){
-    //                 count++;
-    //             }
-    //         }
-    //     }   
+        if(text != null &&  Character.isAlphabetic(suffix)){
+            for(int i = 0; i < words.length; i++){
+                if(words[i].endsWith(Character.toString(suffix))){
+                    count++;
+                }
+            }
+
+            if(count == 0){
+                return -1;
+            }else{
+                return count;
+            }
+        }else{
+            return -1;
+        }   
         
-    // }
+    }
     
     /*
      * Exercise 6.
@@ -222,9 +229,18 @@ public class ProblemSet5 {
         }
 
         for(int i = 0; i < main; i++){
-            combined += String.valueOf(a.charAt(i));
-            combined += String 
+            if(i < a.length() && i < b.length()){
+                combined += String.valueOf(a.charAt(i));
+                combined += String.valueOf(b.charAt(i));
+            }else if(i < a.length()){
+                combined += String.valueOf(a.charAt(i));
+            }else if(i < b.length()){
+                combined += String.valueOf(b.charAt(i));
+            }else{
+                combined = null;
+            }
         }
+        return combined;
     }
     
     /*
